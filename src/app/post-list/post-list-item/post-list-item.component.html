@@ -1,7 +1,10 @@
-<h1>{{ post.title }}</h1>
-<span>{{ post.createAt | date }}</span>
-<p> {{ post.content }} </p>
-<span>Evaluation : {{ post.loveIts }} </span>
-<button (click)="likes()">Love it !</button>
-<button (click)="dislikes()">Don't love it !</button>
+<li class="list-group-item list-item" [ngClass]="post.loveIts > 0 ? 'list-group-item-success' : (post.loveIts < 0 ? 'list-group-item-danger' : 'list-group-item')" >
+  <h1>{{ post.title }}</h1>
+  <span class="list-item__date">{{ post.createdAt | date:'dd/MM/yyyy - H:mm ' }}</span>
+  <p> {{ post.content }} </p>
+  <span class="list-item__eval">Evaluation : {{ post.loveIts }} </span>
+  <button class="btn btn-success m-2" (click)="likes()">Love it !</button>
+  <button class="btn btn-danger m-2" (click)="dislikes()">Don't love it !</button>
+</li>
+
 

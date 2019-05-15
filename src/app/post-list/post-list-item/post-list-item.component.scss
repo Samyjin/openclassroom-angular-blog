@@ -1,0 +1,16 @@
+.list-item {
+
+    &__date {
+        display: flex;
+        justify-content: flex-end;
+        font-style: italic;
+        margin: 1em;
+        color: grey;
+    }
+
+    &__eval {
+        display: flex;
+        justify-content: flex-end;
+        font-style: italic;
+    }
+}
